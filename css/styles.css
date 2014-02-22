@@ -1,6 +1,13 @@
 /* Your Awesome Website */
 
+body {
+	background: lightgray;
+}
+
 h1 {
 	color:red;
-	position: relative;
+	text-align: center;
 }
+form {
+ 	color: black;
+ }

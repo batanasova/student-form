@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <title>EWU Student Form</title>
 
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -19,60 +19,70 @@
 </br>
 
     <!-- Student Form -->
-
-<form>
+<form data-abide>
+  <div class="name-field">
     <div class="row">
     <div class="large-6 columns">
-      <label>First Name
-        <input type="text" placeholder="First Name" />
+      <div class="name-field">
+      <label>First Name: <small>required</small>
+        <input type="text" placeholder="First Name", required pattern="[a-zA-Z]+" />
       </label>
+      <small class="error">Name is required and must be a string.</small>
+    </div>
   </div>
   <div class="large-6 columns">
-      <label>Last Name
-        <input type="text" placeholder="Last Name" />
+    <div class="name-field">
+      <label>Last Name: <small>required</small>
+        <input type="text" placeholder="Last Name", required pattern="[a-zA-Z]+"/>
       </label>
+      <small class="error">Name is required and must be a string.</small>
+    </div>
   </div>
   </div>
 
   <div class="row">
     <div class="large-12 columns">
       <label>Email Adress:
-        <input type="text" placeholder="Example: JSmith@eagles.ewu.edu" />
+        <input type="email" placeholder="Example: JSmith@eagles.ewu.edu" />
       </label>
     </div>
   </div>
 
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Student ID Number
-        <input type="text" placeholder="ID #" />
-      </label>
-  </div>
+<div class="row">
   <div class="large-6 columns">
-      <label>Graduation Date
-        <input type="text" placeholder="xx/xx/xxxx" />
+      <div class="name-field">
+      <label>Student ID Number: <small>required</small>
+        <input type="number" required pattern="[a-zA-Z]+" />
+      </label>
+      <small class="error">ID # is required and must be a string.</small>
+    </div>
+  </div>
+
+  <div class="large-6 columns">
+      <label>Graduation Date:
+        <input type="date" placeholder="DD/MM/YYYY"/>
       </label>
   </div>
   </div>
     
-
   <div class="row">
     <div class="large-12 columns">
-      <label>Select a Major
+      <label>Major:
         <select>
-          <option value="husker"></option>
-          <option value="starbuck">Starbuck</option>
-          <option value="hotdog">Hot Dog</option>
-          <option value="apollo">Apollo</option>
+          <option value="major">Select a Major</option>
+          <option value="art">Art</option>
+          <option value="biology">Biology</option>
+          <option value="computer">Computer Science</option>
+          <option value="design">Design</option>
+          <option value="engineering">Engineering</option>
         </select>
       </label>
     </div>
   </div>
+</div>
 </form>
 
     <!-- End of Studet Form -->
-    
-   
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
